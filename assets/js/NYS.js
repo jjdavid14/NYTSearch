@@ -1,5 +1,5 @@
 // Grab the search input box
-var searchVal = $("#search-term").val();
+var searchVal = $("#search-term").val().trim();
 
 // Grab the Numbers dropdown box
 var NumberRecords = $("#limit-art").val();
@@ -15,7 +15,7 @@ var EndYear = $("#end-year").val();
 $("#search-btn").on("click", function() {
 
 	// Prevent the form from submitting
-	event.preventDefault();
+//	event.preventDefault();
 
 	// Make an AJAX call
 	AJAXcall();
@@ -28,40 +28,28 @@ $("#clear").on("click", function() {
 	$("#search-results").empty();
 });
 
+	var APIKey = "db39dc1be42144009472b181348fb721"
+
+//console.log(queryURL);
+
 function AJAXcall() {
+
 
 	// Grab the results div
 	// This results div will show each data from the AJAX call
 	var resultHTML = $("#search-results");
 
-	//API Key
-	var APIKey = "";
-	
 	// Create a URL for the query
-	var queryURL = "";
+	var queryURL = "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + searchVal + "&page=0&sort=oldest&api-key=" + APIKey;
 
 	// Make an AJAX call
 	$.ajax({
 		url: queryURL,
 		method: "GET"
 	}).done(function(response) {
+	console.log(queryURL);
+	console.log(response);
+		// Insert a data into a div
 
-	// Built by LucyBot. www.lucybot.com
-var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-url += '?' + $.param({
-  'api-key': "22ed713519e84eceafab4289ff6c873b",
-  'begin_date': "19000101",
-  'end_date': "20171231"
-});
-$.ajax({
-  url: url,
-  method: 'GET',
-}).done(function(result) {
-  console.log(result);
-}).fail(function(err) {
-  throw err;
-})
-
-});
 	});
 }
