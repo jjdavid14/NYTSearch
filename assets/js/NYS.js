@@ -44,6 +44,18 @@ function AJAXcall() {
 	}).done(function(response) {
 
 		// Insert a data into a div
-
+// Built by LucyBot. www.lucybot.com
+var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+url += '?' + $.param({
+  'api-key': "22ed713519e84eceafab4289ff6c873b"
+});
+$.ajax({
+  url: url,
+  method: 'GET',
+}).done(function(result) {
+  console.log(result);
+}).fail(function(err) {
+  throw err;
+});
 	});
 }
