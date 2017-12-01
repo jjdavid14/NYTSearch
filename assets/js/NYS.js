@@ -1,5 +1,5 @@
 // Grab the search input box
-var searchVal = $("#search-term").val().trim();
+var searchVal = $("#search-term").val();
 
 // Grab the Numbers dropdown box
 var NumberRecords = $("#limit-art").val();
