@@ -1,24 +1,27 @@
-// Grab the search input box
-var searchVal = $("#search-term").val();
 
-// Grab the Numbers dropdown box
-var NumberRecords = $("#limit-art").val();
-
-// Grab the start year box
-var StartYear = $("#start-year").val();
-
-// Grab the End year box
-var EndYear = $("#end-year").val();
 
 // Set an onclick listener for the Search Button
 // This will populate the results div with the results from the AJAX call
 $("#search-btn").on("click", function() {
+	// Grab the search input box
+	var searchVal = $("#search-term").val().trim();
 
-	// Prevent the form from submitting
-	event.preventDefault();
+	// Grab the Numbers dropdown box
+	var NumberRecords = $("#limit-art").val();
+
+	// Grab the start year box
+	var StartYear = $("#start-year").val();
+
+	// Grab the End year box
+	var EndYear = $("#end-year").val();
+
+	var resultHTML = $("#search-results");
+	resultHTML.append("HELLO");
+
+	createArticles(NumberRecords);
 
 	// Make an AJAX call
-	AJAXcall();
+	//AJAXcall();
 
 });
 
@@ -46,22 +49,18 @@ function AJAXcall() {
 		method: "GET"
 	}).done(function(response) {
 
-	// Built by LucyBot. www.lucybot.com
-var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-url += '?' + $.param({
-  'api-key': "22ed713519e84eceafab4289ff6c873b",
-  'begin_date': "19000101",
-  'end_date': "20171231"
-});
-$.ajax({
-  url: url,
-  method: 'GET',
-}).done(function(result) {
-  console.log(result);
-}).fail(function(err) {
-  throw err;
-})
 
-});
+
 	});
+}
+
+function createArticles(num) {
+	for(var i = 0; i < num; i++) {
+		var newBlock = $("<div class='article'>");
+		newBlock.append("<h3>");
+		newBlock.append("<span class='label label-primary'>" + (i + 1) + "</span>");
+		newBlock.append("<strong>" + articles[i] + "</strong>");
+		newBlock.append("</h3>");
+
+	}
 }
