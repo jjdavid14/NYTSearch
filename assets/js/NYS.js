@@ -34,6 +34,9 @@ function AJAXcall() {
 	// This results div will show each data from the AJAX call
 	var resultHTML = $("#search-results");
 
+	//API Key
+	var APIKey = "";
+	
 	// Create a URL for the query
 	var queryURL = "";
 
