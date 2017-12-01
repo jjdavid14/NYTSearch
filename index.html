@@ -22,7 +22,7 @@
     <!-- container -->
     <div class="container">
         <!-- Jumbotron for heading -->
-        <h1 class="jumbotron bg-dkblue text-center text-white"><i class="fa fa-newspaper-o" aria-hidden="true"></i> New York Times Search</h1>
+        <h1 class="jumbotron bg-dkblue text-center text-white"><strong><i class="fa fa-newspaper-o" aria-hidden="true"></i> New York Times Search</strong></h1>
         <!-- form -->
         <div class="row">
             <div class="col-md-12">
@@ -34,7 +34,7 @@
                         <form>
                             <div class="form-group">
                                 <label for="search-term">Search Term:</label>
-                                <input type="text" class="form-control" id="search-term">
+                                <input type="text" class="form-control" id="search-term" required>
                             </div>
                             <div class="form-group">
                                 <label for="limit-art">Example select</label>
@@ -53,8 +53,8 @@
                                 <input type="text" class="form-control" id="end-year">
                             </div>
                             <!-- inside of form have four inputs and two buttons -->
-                            <button type="button" id="search-btn" class="btn btn-dark">Search</button>
-                            <button type="button" id="clear" class="btn btn-dark">Clear</button>
+                            <button type="submit" id="search-btn" class="btn btn-dark">Search</button>
+                            <button type="submit" id="clear" class="btn btn-dark">Clear</button>
                         </form>
                     </div>
                 </div>
