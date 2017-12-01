@@ -1,21 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>New York Search</title>
     <!-- Bookstrap Link -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="NYS.js"></script>    
+    <script type="text/javascript" src="NYS.js"></script>
 </head>
+
 <body>
+    
+        font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    line-height: 1.42857143;
+    color: #2c3e50;
+    background-color: #ffffff;
+}
     <!-- container -->
+    <div class="container">
         <!-- Jumbotron for heading -->
+        <div class="jumbotron bg-primary">New York Times Search</div>
         <!-- form -->
-            <!-- inside of form have four inputs and two buttons -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="search-term">Search Term:</label>
+                        <input type="email" class="form-control" id="search-term">
+                    </div>
+                    <div class="form-group">
+                        <label for="limit-art">Example select</label>
+                        <select class="form-control" id="limit-art">
+                            <option>1</option>
+                            <option>5</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="start-year">Start Year (Optional):</label>
+                        <input type="email" class="form-control" id="start-year">
+                    </div>
+                    <div class="form-group">
+                        <label for="end-year">End Year (Optional):</label>
+                        <input type="email" class="form-control" id="end-year">
+                    </div>
+                    <button type="button" id="search-btn" class="btn btn-dark">Search</button>
+                    <button type="button" id="clear" class="btn btn-dark">Clear</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- inside of form have four inputs and two buttons -->
+        <div>
+            Top Articles
+            <div class="search-results">
+
+            </div>
+        </div>
         <!-- result div -->
+    </div>
+
 </body>
+
 </html>
