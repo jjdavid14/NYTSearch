@@ -43,11 +43,12 @@ function AJAXcall() {
 		method: "GET"
 	}).done(function(response) {
 
-		// Insert a data into a div
-// Built by LucyBot. www.lucybot.com
+	// Built by LucyBot. www.lucybot.com
 var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 url += '?' + $.param({
-  'api-key': "22ed713519e84eceafab4289ff6c873b"
+  'api-key': "22ed713519e84eceafab4289ff6c873b",
+  'begin_date': "19000101",
+  'end_date': "20171231"
 });
 $.ajax({
   url: url,
@@ -56,6 +57,8 @@ $.ajax({
   console.log(result);
 }).fail(function(err) {
   throw err;
+})
+
 });
 	});
 }
