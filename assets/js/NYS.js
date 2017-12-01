@@ -25,10 +25,9 @@ $("#search-btn").on("click", function() {
 
 // Set an onclick listener for the Clear button
 // This will erase all the records displayed in the results div
-$("#clear").on("click", function() {
+$("#clear").on("click", function () {
 	$("#search-results").empty();
 });
-
 //console.log(queryURL);
 
 function AJAXcall(searchVal, num) {
@@ -74,9 +73,4 @@ function AJAXcall(searchVal, num) {
 		}
 	});
 
-}
-
-function createArticles(num) {
-	console.log(articles);
-	
 }
