@@ -26,7 +26,7 @@
         <!-- form -->
         <div class="row">
             <div class="col-md-12">
-                <div class="card mb-3">
+                <div class="card mb-3 border border-white">
                     <div class="card-header text-white bg-dkblue">
                         <i class="fa fa-list-alt" aria-hidden="true"></i> Search Parameters
                     </div>
@@ -34,7 +34,7 @@
                         <form>
                             <div class="form-group">
                                 <label for="search-term">Search Term:</label>
-                                <input type="text" class="form-control" id="search-term" required>
+                                <input type="text" class="form-control" id="search-term">
                             </div>
                             <div class="form-group">
                                 <label for="limit-art">Example select</label>
@@ -52,8 +52,8 @@
                                 <label for="end-year">End Year (Optional):</label>
                                 <input type="text" class="form-control" id="end-year">
                             </div>
-                            <button type="submit" id="search-btn" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i> Search</button>
-                            <button type="submit" id="clear" class="btn btn-dark"><i class="fa fa-trash-o" aria-hidden="true"></i> Clear</button>
+                            <button type="button" id="search-btn" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i> Search</button>
+                            <button type="button" id="clear" class="btn btn-dark"><i class="fa fa-trash-o" aria-hidden="true"></i> Clear</button>
                         </form>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
         <!-- result div -->
         <div class="row">
             <div class="col-md-12">
-                <div class="card mb-3">
+                <div class="card mb-3 border border-white">
                     <div class="card-header text-white bg-dkblue">
                         <i class="fa fa-table" aria-hidden="true"></i>
                         Top Articles
