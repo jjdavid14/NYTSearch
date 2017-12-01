@@ -5,21 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>New York Search</title>
+    <title>New York Times Search</title>
     <!-- Bookstrap Link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
         crossorigin="anonymous">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
     <!-- CSS Style -->
-    <style>
-        body {
-            font-family: 'Times New Roman', Times, serif;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/NYS.js"></script>
 </head>
 
 <body>
@@ -27,14 +22,13 @@
     <!-- container -->
     <div class="container">
         <!-- Jumbotron for heading -->
-        <h1 class="jumbotron bg-info text-center text-white"><i class="fa fa-newspaper-o" aria-hidden="true"></i> New York Times Search</h1>
+        <h1 class="jumbotron bg-dkblue text-center text-white"><i class="fa fa-newspaper-o" aria-hidden="true"></i> New York Times Search</h1>
         <!-- form -->
         <div class="row">
             <div class="col-md-12">
                 <div class="card mb-3">
-                    <div class="card-header text-white bg-info">
-                        <i class="fa fa-list-alt" aria-hidden="true"></i>
-Search Parameters
+                    <div class="card-header text-white bg-dkblue">
+                        <i class="fa fa-list-alt" aria-hidden="true"></i>Search Parameters
                     </div>
                     <div class="card-body">
                         <form>
@@ -72,9 +66,9 @@ Search Parameters
         <div class="row">
             <div class="col-md-12">
                 <div class="card mb-3">
-                    <div class="card-header text-white bg-info">
+                    <div class="card-header text-white bg-dkblue">
                         <i class="fa fa-table" aria-hidden="true"></i>
-Top Articles
+                        Top Articles
                     </div>
                     <div class="card-body" id="search-results">
 
@@ -85,6 +79,7 @@ Top Articles
 
     </div>
 
+<script type="text/javascript" src="assets/js/NYS.js"></script>
 </body>
 
 </html>
